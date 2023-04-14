@@ -1,10 +1,29 @@
-function displayMessage() {
-    let msg = document.getElementById('message').value;
-    //alert(msg);
+//Controller
+function getValues() {
+    //Get inputs from the user and decides what to do with it
+    let userInput = document.getElementById('inputMessage').value;
 
-    Swal.fire({
-        backdrop: false,
-        title: 'APP Name',
-        text: msg
-    })
+    let reversedInput = reverseString(userInput);
+
+    displayString(reversedInput);
+}
+
+//Business Logic
+function reverseString(message) {
+    //Take a string, returns string in reverse
+    let reverseMessage = '';
+
+    for (let index = message.length -1; index >= 0; index--){
+        reverseMessage += message[index];
+    }
+
+    return reverseMessage;
+
+}
+
+//View
+function displayString(reverseMessage) {
+    //Displays string on the page
+    document.getElementById('msg').textContent = reverseMessage;
+    document.getElementById('alert').classList.remove('d-none');
 }
