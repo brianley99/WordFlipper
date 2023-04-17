@@ -25,5 +25,5 @@ function reverseString(message) {
 function displayString(reverseMessage) {
     //Displays string on the page
     document.getElementById('msg').textContent = reverseMessage;
-    document.getElementById('alert').classList.remove('d-none');
+    document.getElementById('resultsAlert').classList.remove('d-none');
 }
