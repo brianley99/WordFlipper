@@ -17,6 +17,9 @@ function reverseString(message) {
         reverseMessage += message[index];
     }
 
+    //Turns string to lowercase
+    reverseMessage = reverseMessage.toLowerCase();
+
     return reverseMessage;
 
 }
@@ -25,5 +28,5 @@ function reverseString(message) {
 function displayString(reverseMessage) {
     //Displays string on the page
     document.getElementById('msg').textContent = reverseMessage;
-    document.getElementById('resultsAlert').classList.remove('d-none');
+    document.getElementById('results').classList.remove('d-none');
 }
